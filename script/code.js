@@ -23,3 +23,18 @@ document.querySelectorAll('arithmetics').forEach( (symbols)=>{
         result.value += e.target.innerText
     })
 })
+document.getElementById('division')
+.addEventListener('click', ()=>{
+    firstOp = result.value;
+    operator = "/";
+    clear();
+})
+function display (value){
+    if(value == "." && checkerArray.includes(".")){
+        return
+    }else if(value== "/" || value == "*" || value == "+" || value == "-") {
+    }else {
+        result.value += value;
+        checkerArray.push(value)
+    }
+}
